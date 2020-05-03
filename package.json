@@ -10,7 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
     "react": "16.11.0",
+    "react-hooks": "^1.0.1",
     "react-native": "0.62.2"
   },
   "devDependencies": {
@@ -25,5 +28,20 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
