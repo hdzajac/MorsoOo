@@ -1,13 +1,15 @@
 import React from 'react';
+import {View} from 'react-native';
 import {StyleContextProvider} from './helpers';
-import {View, Text} from 'react-native';
+import {StateContextProvider} from './helpers/StateContext';
+import {ModeDecision} from './main';
 
 export const Morsooo = () => (
-  <StyleContextProvider>
-    <View>
-      <Text>Hello World!</Text>
-    </View>
-  </StyleContextProvider>
+  <StateContextProvider>
+    <StyleContextProvider>
+      <ModeDecision />
+    </StyleContextProvider>
+  </StateContextProvider>
 );
 
 export default Morsooo;

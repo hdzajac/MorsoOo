@@ -29,14 +29,14 @@ import Morsooo from './src/Morsoo';
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+      {/* <StatusBar barStyle="dark-content" /> */}
+      {/* <SafeAreaView style={{flex:1}}> */}
+        {/* <ScrollView */}
+          {/* contentInsetAdjustmentBehavior="automatic" */}
+          {/* style={styles.scrollView}> */}
           <Morsooo/>
-        </ScrollView>
-      </SafeAreaView>
+        {/* </ScrollView> */}
+      {/* </SafeAreaView> */}
     </>
   );
 };
@@ -44,6 +44,7 @@ const App = () => {
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
+    flex: 1
   },
   engine: {
     position: 'absolute',
