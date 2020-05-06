@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint --ext=jsx,ts,tsx src",
-    "lint-fix": "eslint --ext=jsx,ts,tsx src --fix"
+    "lint-fix": "eslint --ext=jsx,ts,tsx src --fix",
+    "build-android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug"
   },
   "dependencies": {
     "eslint-config-prettier": "^6.11.0",

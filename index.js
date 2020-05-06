@@ -2,8 +2,26 @@
  * @format
  */
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import { Navigation } from "react-native-navigation";
+import HomeView from './src/main/HomeView';
+import ReceiverView from "./src/receiving/ReceiverView";
+import TransmitterView from "./src/transmitting/TransmitterView";
 
-AppRegistry.registerComponent(appName, () => App);
+Navigation.registerComponent('Home', () => HomeView);
+Navigation.registerComponent('Receiver', () => ReceiverView);
+Navigation.registerComponent('Transmitter', () => TransmitterView);
+Navigation.events().registerAppLaunchedListener(() => {
+   Navigation.setRoot({
+     root: {
+       stack: {
+         children: [
+           {
+             component: {
+               name: 'Home'
+             }
+           } 
+         ]
+       }
+     }
+  });
+});
