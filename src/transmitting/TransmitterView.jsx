@@ -1,11 +1,21 @@
-import React from 'react';
+import React, {Component, useState} from 'react';
 import {PageLayout} from '../layout/PageLayout';
-import {Text} from 'react-native';
+import {Form, Label, Textarea} from 'native-base';
 
 const TransmitterView = () => {
+  const [message, setMessage] = useState('');
+
   return (
     <PageLayout>
-      <Text>Witam</Text>
+      <Form>
+        <Label>Write whatever</Label>
+        <Textarea
+          rowSpan={5}
+          bordered
+          onChangeText={text => setMessage(text)}
+          value={message}
+        />
+      </Form>
     </PageLayout>
   );
 };

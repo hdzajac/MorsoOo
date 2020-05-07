@@ -6,7 +6,6 @@ import {Text, Button} from 'react-native';
 const HomeView = props => {
   return (
     <PageLayout>
-      <Text>Choose wisely</Text>
       <Button
         title="Receiver"
         onPress={() => {
@@ -17,7 +16,7 @@ const HomeView = props => {
                 // Optional options object to configure the screen
                 topBar: {
                   title: {
-                    text: 'Receiver', // Set the TopBar title of the new Screen
+                    text: 'Listening', // Set the TopBar title of the new Screen
                   },
                 },
               },
@@ -35,7 +34,7 @@ const HomeView = props => {
                 // Optional options object to configure the screen
                 topBar: {
                   title: {
-                    text: 'Transmitter', // Set the TopBar title of the new Screen
+                    text: 'Say something', // Set the TopBar title of the new Screen
                   },
                 },
               },

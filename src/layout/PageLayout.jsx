@@ -1,11 +1,11 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Container, Content} from 'native-base';
 
 export const PageLayout = props => {
   return (
-    <View style={{flex: 1, backgroundColor: 'powderblue'}}>
-      {props.children}
-    </View>
+    <Container>
+      <Content padder>{props.children}</Content>
+    </Container>
   );
 };
 
